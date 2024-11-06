@@ -1,10 +1,10 @@
 import React from 'react';
-import { cn } from "@/lib/utils";
+
 import Marquee from "@/components/ui/marquee";
 
 
 
-const Expertteam = () => {
+const Team = () => {
     return (
       <div>
         <div className="w-full px-28 bg-white border-white dark:bg-neutral-950 pt-[8rem]">
@@ -147,7 +147,7 @@ const main = () => {
     return (
       <main>
        
-        <Expertteam/>
+        <Team/>
         <MarqueeDemo />
         <CulturePage/>
       </main>
