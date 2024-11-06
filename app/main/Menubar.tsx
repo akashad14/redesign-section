@@ -86,25 +86,22 @@ const NavbarActions: React.FC = () => {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                type="button"
-                className="p-2 rounded-md text-black hover:bg-gray-200 focus:outline-none"
-                aria-controls="mobile-menu"
-                aria-expanded={isOpen}
-              >
-                <span className="sr-only">Open main menu</span>
-                {isOpen ? (
-                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path fillRule="evenodd" d="M6 18L18 6M6 6l12 12" clipRule="evenodd" />
-                  </svg>
-                ) : (
-                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path fillRule="evenodd" d="M4 6h16M4 12h16M4 18h16" clipRule="evenodd" />
-                  </svg>
-                )}
-              </button>
-            </div>
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    type="button"
+    className="p-2 rounded-md border border-gray-400 text-black hover:bg-gray-300 shadow-sm focus:outline-none"
+    aria-controls="mobile-menu"
+    aria-expanded={isOpen}
+  >
+    <span className="sr-only">Open main menu</span>
+    {isOpen ? (
+      <svg 
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+    ) : (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
+    )}
+  </button>
+</div>
           </div>
         </div>
 
