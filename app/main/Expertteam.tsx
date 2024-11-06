@@ -56,7 +56,7 @@ const reviews = [
     img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Famf1.jpg&w=96&q=75",
   },
   {
-    name: "JOlivia Brown",
+    name: "Olivia Brown",
     username: "Content Writer",
     body: "Develops engaging and informative content",
     img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Finf4.jpg&w=96&q=75",
@@ -78,43 +78,49 @@ const ReviewCard = ({
   body: string;
 }) => {
   return (
-    <figure
-      className={cn(
-        "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border-[3px] p-2",
-        // light styles
-        "border-black-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-0">
-        <img className="rounded-full" width="52" height="52" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-xl font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
+    <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg w-80 max-w-xs m-4 dark:bg-gray-800">
+      <img
+        className="w-20 h-20 rounded-full border-4 border-pink-500 mb-4"
+        src={img}
+        alt={`${name}'s profile`}
+      />
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+        {name}
+      </h3>
+      <p className="text-sm text-gray-500 dark:text-gray-400">{username}</p>
+      <p className="text-center text-gray-600 dark:text-gray-300 mt-4">{body}</p>
+      
+      {/* Star Rating */}
+      <div className="flex mt-4">
+        {[...Array(5)].map((_, index) => (
+          <svg
+            key={index}
+            className="w-5 h-5 text-yellow-400"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.478 4.549a1 1 0 00.95.69h4.797c.969 0 1.371 1.24.588 1.81l-3.89 2.828a1 1 0 00-.364 1.118l1.478 4.548c.3.921-.755 1.688-1.54 1.118l-3.889-2.828a1 1 0 00-1.176 0l-3.89 2.828c-.784.57-1.838-.197-1.539-1.118l1.478-4.548a1 1 0 00-.364-1.118L2.135 9.976c-.784-.57-.381-1.81.588-1.81h4.797a1 1 0 00.95-.69L9.049 2.927z" />
+          </svg>
+        ))}
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
+    </div>
   );
 };
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex h-[420px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border-[2px] bg-background">
+    <div className="relative flex h-[420px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-900 p-8">
       <Marquee pauseOnHover className="[--duration:80s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+        {reviews.map((review, index) => (
+          <ReviewCard key={index} {...review} />
         ))}
       </Marquee>
-      
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-gray-900"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-gray-900"></div>
     </div>
   );
-};
+}
 
 const CulturePage: React.FC = () => {
   return (

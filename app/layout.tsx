@@ -7,6 +7,7 @@ import Expertteam from "./main/Expertteam";
 import Journeysection from "./main/Journeysection"
 import Story from "./main/Story";
 import Footer from "./main/Footer";
+import Ourvalue from "./main/Ourvalue";
 
 
 
@@ -41,6 +42,7 @@ export default function RootLayout({
        <Menubar/> 
        <Home/>
        <Story/>
+       <Ourvalue/>
        <Expertteam/>
        <Journeysection/>
        <Footer/>
