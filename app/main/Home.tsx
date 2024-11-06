@@ -14,9 +14,9 @@ export function ParticlesDemo() {
   }, [theme]);
 
   return (
-    <section className="flex flex-col items-center justify-center px-4 md:flex-row md:px-8 py-16">
+    <section className="flex flex-col items-center justify-center px-4 md:flex-row md:px-8 py-16 dark:bg-black  dark:bg-opacity-30">
       <div className="space-y-6 max-w-xl text-center md:text-left">
-        <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl mt-12">
+        <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl mt-12 dark:from-blue-300 dark:to-purple-400">
           <span className="text-black dark:text-white">Everything Talent simplifies hiring with a </span>
           <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
             free ATS and AI

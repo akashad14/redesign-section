@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 
 const StorySection: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-50  dark:bg-black ">
     <div className="text-center max-w-3xl mx-auto space-y-4">
-      <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">Our Story</h2>
-      <p className="text-base sm:text-lg md:text-xl font-normal text-gray-600 mt-6 mb-10">
+      <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6 dark:text-white">Our Story</h2>
+      <p className="text-base sm:text-lg md:text-xl font-normal text-gray-600 mt-6 mb-10 dark:text-white">
         We not only make the world’s most comfortable hammocks, but through training and sustainable job creation, 
         we empower our weavers and their families to break the cycle of poverty and build a brighter future.
       </p>

@@ -124,23 +124,27 @@ export function MarqueeDemo() {
 
 const CulturePage: React.FC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-    <div className="bg-white shadow-lg rounded-lg p-6 md:p-8 w-full max-w-3xl md:max-w-2xl lg:max-w-4xl">
-        <h2 className="text-2xl font-bold mb-2 text-gray-800">Our Culture</h2>
-        <p className="text-gray-500 mb-4 md:mb-6">
-            We foster a collaborative and inclusive environment where innovation thrives, professional growth is supported, and every team member is valued.
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 md:p-8 w-full max-w-3xl md:max-w-2xl lg:max-w-4xl">
+        <h2 className="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">Our Culture</h2>
+        
+        <p className="text-gray-500 dark:text-gray-400 mb-4 md:mb-6">
+          We foster a collaborative and inclusive environment where innovation thrives, professional growth is supported, and every team member is valued.
         </p>
-        <p className="text-gray-800 mb-3 md:mb-4">
-            Everything Talent is built on the principles of collaboration, respect, and continuous growth. We are a team of dedicated professionals passionate about improving the hiring experience for both employers and candidates. Our culture fosters creativity, encourages learning, and supports each individual’s development.
+        
+        <p className="text-gray-800 dark:text-gray-200 mb-3 md:mb-4">
+          Everything Talent is built on the principles of collaboration, respect, and continuous growth. We are a team of dedicated professionals passionate about improving the hiring experience for both employers and candidates. Our culture fosters creativity, encourages learning, and supports each individual’s development.
         </p>
-        <p className="text-gray-800 mb-4 md:mb-6">
-            We are driven by a shared commitment to making a positive impact on the world of recruitment. As we grow, we remain focused on delivering solutions that are not only effective but also aligned with our core values. We invite you to join us on this journey and experience the difference our platform can make in your hiring process.
+        
+        <p className="text-gray-800 dark:text-gray-200 mb-4 md:mb-6">
+          We are driven by a shared commitment to making a positive impact on the world of recruitment. As we grow, we remain focused on delivering solutions that are not only effective but also aligned with our core values. We invite you to join us on this journey and experience the difference our platform can make in your hiring process.
         </p>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-            Contact Us
+        
+        <button className="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Contact Us
         </button>
+      </div>
     </div>
-</div>
   );
 };
 const main = () => {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import localFont from "next/font/local";
 import "./globals.css";
 import Menubar from "./main/Menubar";
@@ -8,6 +9,8 @@ import Journeysection from "./main/Journeysection"
 import Story from "./main/Story";
 import Footer from "./main/Footer";
 import Ourvalue from "./main/Ourvalue";
+
+
 
 
 
@@ -39,13 +42,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+    
        <Menubar/> 
        <Home/>
        <Story/>
        <Ourvalue/>
        <Expertteam/>
        <Journeysection/>
+      
        <Footer/>
+      
        
         {children}
       </body>
