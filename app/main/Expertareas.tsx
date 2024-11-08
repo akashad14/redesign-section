@@ -10,7 +10,7 @@ const ExpertiseSection: React.FC = () => {
         These expertise areas ensure the ATS functions comprehensively, supporting recruitment teams with all aspects of hiring.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mx-auto ml-8 sm:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mx-auto px-4 md:px-8">
       <div className="w-64 bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 relative  overflow-hidden dark:bg-gray-800">
       <div className="w-24 h-24 bg-violet-500 rounded-full absolute -right-5 -top-7">
         <p className="absolute bottom-6 left-7 text-white text-2xl">01</p>
